@@ -4,14 +4,14 @@ This repository contains four real-world project from GitHub. We have downloaded
 
 These programs are **buggy** so you will get `BUILD FAILURE` message if you try to run the command `mvn clean test`. The bugs are not real, we have manually inserted the bugs in the program. In each program we have inserted only one bug. The bugs are such that each mutators M1, ..., M4 can detect and fix them. The table below, shows the programs, the directory that they reside, and the purpose of the bugs they contain.
 
-|Program             |Directory      |Suitable for Testing|
-|:------------------:|:-------------:|:------------------:|
-|Apache Commons Codec|`commons-codec`|M1                  |
-|Joda Time           |`joda-time`    |M2                  |
-|Apache Commons Lang |`commons-lang` |M3                  |
-|JFree Chart         |`jfreechart`   |M4                  |
+|Program             |Directory      |Suitable for Testing|Citation                                    |
+|:------------------:|:-------------:|:------------------:|:------------------------------------------:|
+|Apache Commons Codec|`commons-codec`|M1                  |https://github.com/apache/commons-codec.git |
+|Joda Time           |`joda-time`    |M2                  |https://github.com/JodaOrg/joda-time.git    |
+|Apache Commons Lang |`commons-lang` |M3                  |https://github.com/apache/commons-lang.git  |
+|JFree Chart         |`jfreechart`   |M4                  |https://github.com/jfree/jfreechart.git     |
 
-Pelase note that all the bugs have been successfully fixed by the Ali's implementation of the mutators M1, ..., M4. Note further that Joda Time requires Maven version 3.5.0, while other benchmark programs run on both versions 3.3.9 and 3.5.0 of Maven without any problem.
+Pelase note that all the bugs have been successfully fixed by the Ali's implementation of the mutators M1, ..., M4. Note further that Joda Time requires Maven version 3.5.0, while other benchmark programs run on both versions 3.3.9 and 3.5.0 of Maven without any problem. Linux systems, by default installs version 3.3.9 of Maven, thus you need to be careful if you are using Linux Operating System. You can query the version of your Maven using the command `mvn -version`.
 
 Last but not least, each benchmark program is equipped with a default POM file that Ali has prepared for you. You don't need to care other parts of the POM file. The only part that you might want to modify is shown below.
 
@@ -37,3 +37,5 @@ You can clone the repository using the following command, which works on both Wi
 git clone https://github.com/ali-ghanbari/SW-Testing-Course-Project-Benchmark-Programs.git
 ```
 
+## Testing
+Since the programs are modified to become buggy, you should not execute test cases. Therefore, use the command `mvn clean test -DskipTests` to compile the source files and test cases without executing the test cases. After that you can execute the command `mvn org.pitest:pitest-maven:mutationCoverage` to run your version of PIT.
