@@ -30,7 +30,7 @@ Last but not least, each benchmark program is equipped with a default POM file t
 ```
 As you can see, Maven is going to use version `1.4.0-SNAPSHOT` of PIT (so make sure you are modifying and installing the correct version of PIT). Furthermore, all mutators (including yours) are activated. Finally, PIT shall use only one thread of execution for mutation (you can increase it up to 4 so as to make your mutation process faster).
 
-## Clonning
+## Cloning
 You can clone the repository using the following command, which works on both Windows and Unix platforms.
 
 ```
