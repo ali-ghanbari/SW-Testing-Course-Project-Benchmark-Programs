@@ -339,26 +339,16 @@
     <!-- define build -->
     <plugins>
       <plugin>
-                <groupId>org.pitest</groupId>
-                <artifactId>pitest-maven</artifactId>
-                <version>1.4.0-SNAPSHOT</version>
-                <configuration>
-		   <targetClasses>
-            <param>org.joda.time.*</param>
-          </targetClasses>
-          <targetTests>
-          <param>*.TestAllPackages*</param>
-          </targetTests>
-<threads>2</threads>
-                        <mutators>
-			  <mutator>ALL</mutator>
-                        </mutators>
-                        <outputFormats>
-                        <param>XML</param>
-                        <param>LOG</param>
-                        </outputFormats>
-                </configuration>
-            </plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.4.0-SNAPSHOT</version>
+        <configuration>
+	  <threads>2</threads>
+          <mutators>
+	    <mutator>ALL</mutator>
+          </mutators>
+        </configuration>
+      </plugin>
       <!-- Enforce Maven 3.5.0 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
